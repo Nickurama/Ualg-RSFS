@@ -1,0 +1,11 @@
+Q: Mobile Networks?
+R: Networks that you can connect to on-the-move, being able to connect to different antennas at a given time
+
+Q: Wireless Networks?
+R: Networks that provide a LAN/internet access without a wire.
+
+Q: Give 3 examples of WMN technologies.
+R: I don't know what WMN is.
+
+Q: WSN?
+R: I don't know what WSN is.

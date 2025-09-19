@@ -1,6 +1,6 @@
 # Report of 3 things
-## IEEE 802.11(a, b, g, n) -> a table with the characteristics of the standard
-## DFC Distribution Coordination Function (ad-hoc + infrastructure) -> find information on it
+## IEEE 802.11(b, a, g, n) -> a table with the characteristics of the standard
+## DFC Distributed Coordination Function (ad-hoc + infrastructure) -> find information on it
 ## PCF Point Coordination Function (infrastructure) -> find information on it
 
 # Lab 1

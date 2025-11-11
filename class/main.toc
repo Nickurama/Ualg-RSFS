@@ -7,3 +7,4 @@
 \beamer@subsectionintoc {3}{2}{Bandwidth Efficiency}{27}{0}{3}
 \beamer@subsectionintoc {3}{3}{Clock Recovery}{36}{0}{3}
 \beamer@subsectionintoc {3}{4}{Balanced Signals}{49}{0}{3}
+\beamer@subsectionintoc {3}{5}{Passband Transmission}{54}{0}{3}

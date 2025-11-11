@@ -56,8 +56,13 @@ you can't increase S without increasing N
 of the OSI model
 
 ## Balanced Signals
+- explain what are balanced signals (helps with sending through DC components)
+- explain 8B / 10B
 
 ## Passband Transmission
+- explain passband transmission again (used in wifi)
+- explain that constellation diagrams mean angle is phase and distance is amplitude
+- explain that frequency would interfere with phase
 
 
 

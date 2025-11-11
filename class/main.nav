@@ -103,20 +103,20 @@
 \headcommand {\slideentry {4}{2}{1}{65/65}{OFDM (Orthogonal Frequency Division Multiplexing)}{0}}
 \headcommand {\beamer@framepages {65}{65}}
 \headcommand {\beamer@subsectionpages {65}{65}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{66}{TDM (Time Division Multiplexing)}}
-\headcommand {\slideentry {4}{3}{1}{66/66}{TDM (Time Division Multiplexing)}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{66}{OFDMA (Orthogonal Frequency Division Multiple Access)}}
+\headcommand {\slideentry {4}{3}{1}{66/66}{OFDMA (Orthogonal Frequency Division Multiple Access)}{0}}
 \headcommand {\beamer@framepages {66}{66}}
 \headcommand {\beamer@subsectionpages {66}{66}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{67}{STDM (Statistical Time Division Multiplexing)}}
-\headcommand {\slideentry {4}{4}{1}{67/67}{STDM (Statistical Time Division Multiplexing)}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{67}{TDM (Time Division Multiplexing)}}
+\headcommand {\slideentry {4}{4}{1}{67/67}{TDM (Time Division Multiplexing)}{0}}
 \headcommand {\beamer@framepages {67}{67}}
 \headcommand {\beamer@subsectionpages {67}{67}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{68}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}}
-\headcommand {\slideentry {4}{5}{1}{68/68}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{68}{STDM (Statistical Time Division Multiplexing)}}
+\headcommand {\slideentry {4}{5}{1}{68/68}{STDM (Statistical Time Division Multiplexing)}{0}}
 \headcommand {\beamer@framepages {68}{68}}
 \headcommand {\beamer@subsectionpages {68}{68}}
-\headcommand {\beamer@subsectionentry {0}{4}{6}{69}{OFDMA (Orthogonal Frequency Division Multiple Access)}}
-\headcommand {\slideentry {4}{6}{1}{69/69}{OFDMA (Orthogonal Frequency Division Multiple Access)}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{69}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}}
+\headcommand {\slideentry {4}{6}{1}{69/69}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}{0}}
 \headcommand {\beamer@framepages {69}{69}}
 \headcommand {\beamer@subsectionpages {69}{69}}
 \headcommand {\beamer@subsectionentry {0}{4}{7}{70}{WDM (Wavelength Division Multiplexing)}}

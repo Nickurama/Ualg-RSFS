@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1762894686.61224 "/home/luna/Documents/uni_code/rsfs/class/main.tex" "main.pdf" "main" 1762894688.1819 0
-  "/home/luna/Documents/uni_code/rsfs/class/main.tex" 1762894686.54697 17368 bea89c6e97a5581dbc06a537f3e274ea ""
+["pdflatex"] 1762895018.60714 "/home/luna/Documents/uni_code/rsfs/class/main.tex" "main.pdf" "main" 1762895020.17143 0
+  "/home/luna/Documents/uni_code/rsfs/class/main.tex" 1762895018.541 17458 b0df5d571e35d3d3cd0e8790f224d895 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1755987285 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1755987285 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -254,11 +254,11 @@
   "imagens/tdm.png" 1762891456.76667 30381 a3e6dc01d89cee8435831c2d015a91bb ""
   "imagens/ualg_tiny.png" 1762860424 29286 179a7914ba509b3239339bb282e779ed ""
   "imagens/wdm.png" 1762894233.20493 75101 c4c4eb8dceb9cb4e9f9450e20ba6caa6 ""
-  "main.aux" 1762894688.10997 12077 b4a1254926ae34fdcd54727f126740b7 "pdflatex"
-  "main.nav" 1762894688.11182 7787 bc27cd6e5c63ead339e06866a5e6794a "pdflatex"
-  "main.out" 1762894688.11182 4155 2c1bce40ced8c7ee2dc1ec87bca6f44c "pdflatex"
-  "main.tex" 1762894686.54697 17368 bea89c6e97a5581dbc06a537f3e274ea ""
-  "main.toc" 1762894688.11182 1372 464cb6e260b0e1a7732eb6b118fa6d27 "pdflatex"
+  "main.aux" 1762895020.1 12077 d09b8a2f8071a3a010ff69d8bd26bd9c "pdflatex"
+  "main.nav" 1762895020.10155 7787 5fb44edd552d9a55e48f4804a0b15a52 "pdflatex"
+  "main.out" 1762895020.10155 4155 4d9b3564faaab2b7cc36c417a2eacc6c "pdflatex"
+  "main.tex" 1762895018.541 17458 b0df5d571e35d3d3cd0e8790f224d895 ""
+  "main.toc" 1762895020.10155 1372 83776829c7cf85bf2f82293c0876b32c "pdflatex"
   (generated)
   "main.aux"
   "main.log"

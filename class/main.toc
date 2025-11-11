@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Theoretical Basis}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Fourier Analysis}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Bandwidth-Limited Signals}{9}{0}{1}
+\beamer@sectionintoc {2}{The Maximum Data Rate of a Channel}{13}{0}{2}
+\beamer@sectionintoc {3}{Digital Modulation}{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Baseband Transmission}{23}{0}{3}
+\beamer@subsectionintoc {3}{2}{Bandwidth Efficiency}{27}{0}{3}
+\beamer@subsectionintoc {3}{3}{Clock Recovery}{36}{0}{3}
+\beamer@subsectionintoc {3}{4}{Balanced Signals}{49}{0}{3}

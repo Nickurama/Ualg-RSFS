@@ -482,23 +482,117 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Multiplexing}
+
+\begin{frame}
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+        \usebeamerfont{title}\Huge\textbf{Multiplexing}
+    \end{beamercolorbox}
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{FDM (Frequency Division Multiplexing)}
+
+\begin{frame}{FDM (Frequency Division Multiplexing)}
+	\centering
+
+	\begin{itemize}
+		\item Divides the spectrum into frequency bands.
+		\item Requires guard bands.
+		\item Used by AM radio, telephone networks, cellular, terrestrial wireless and satelite networks.
+	\end{itemize}
+
+	\includegraphics[width=0.75\textwidth]{imagens/fdm.png}<2->
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{OFDM (Orthogonal Frequency Division Multiplexing)}
+
+\begin{frame}{OFDM (Orthogonal Frequency Division Multiplexing)}
+	\centering
+
+	\begin{itemize}
+		\item Channel bandwidth is divided into many independent subcarriers (i.e. QAM).
+		\item Subcarriers are packed tightly in the frequency domain.
+		\item Frequency response of each subcarrier is designed to be zero at the center of adjacent subcarriers.
+		\item Guard time is needed to repeat a portion of the signals.
+		\item Used in 802.11, cable networks, power-line networking, and 4G cellular systems.
+	\end{itemize}
+
+	\includegraphics[width=0.75\textwidth]{imagens/ofdm.png}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{TDM (Time Division Multiplexing)}
+
+\begin{frame}{TDM (Time Division Multiplexing)}
+	\centering
+
+	\begin{itemize}
+		\item Users take turns to share the whole bandwidth (round-robin).
+		\item Bits from each input stream are taken in a fixed time slot.
+		\item Input stream is output to an aggregate stream.
+		\item Used in telephone and celullar networks.
+	\end{itemize}
+
+	\includegraphics[width=0.75\textwidth]{imagens/tdm.png}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{STDM (Statistical Time Division Multiplexing)}
+
+\begin{frame}{STDM (Statistical Time Division Multiplexing)}
+	\begin{itemize}
+		\item Almost analogous to TDM.
+		\item No fixed schedule.
+		\item Schedule is decided based on usage information.
+	\end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CDM (Code Division Multiplexing)}
+\subsection{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}
+
+\begin{frame}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}
+	\centering
+
+	\begin{itemize}
+		\item Very wide frequency band
+		\item Users share the whole frequency spectrum at all time.
+		\item $ \boldsymbol{m} $ unique chip vectors $ \boldsymbol{S} $ are chosen for each station (generated with Walsh codes).
+		\item each chip vector $ \boldsymbol{S} $ represents a 1, and it's complement $ \boldsymbol{\bar{S}} $ represents a 0.
+	\end{itemize}
+
+	\includegraphics[width=0.75\textwidth]{imagens/cdma.png}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CDMA (Code Division Multiple Access)}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{OFDMA (Orthogonal Frequency Division Multiple Acess)}
+\subsection{OFDMA (Orthogonal Frequency Division Multiple Access)}
+
+\begin{frame}{OFDMA (Orthogonal Frequency Division Multiple Access)}
+	\begin{itemize}
+		\item
+	\end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{WDM (Wavelength Division Multiplexing)}
+
+\begin{frame}{WDM (Wavelength Division Multiplexing)}
+	\centering
+
+	\begin{itemize}
+		\item Basically just FDM but for very high frequencies (optical fiber)
+	\end{itemize}
+
+	\includegraphics[width=0.75\textwidth]{imagens/wdm.png}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DWDM (Dense Wavelength Division Multiplexing)}
+
+\begin{frame}{DWDM (Dense Wavelength Division Multiplexing)}
+	Analogous to DWDM but higher number of channels and little space between each channel.
+\end{frame}
+
 
 \end{document}

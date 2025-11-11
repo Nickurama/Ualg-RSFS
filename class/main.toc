@@ -8,3 +8,12 @@
 \beamer@subsectionintoc {3}{3}{Clock Recovery}{36}{0}{3}
 \beamer@subsectionintoc {3}{4}{Balanced Signals}{49}{0}{3}
 \beamer@subsectionintoc {3}{5}{Passband Transmission}{54}{0}{3}
+\beamer@sectionintoc {4}{Multiplexing}{62}{0}{4}
+\beamer@subsectionintoc {4}{1}{FDM (Frequency Division Multiplexing)}{63}{0}{4}
+\beamer@subsectionintoc {4}{2}{OFDM (Orthogonal Frequency Division Multiplexing)}{65}{0}{4}
+\beamer@subsectionintoc {4}{3}{TDM (Time Division Multiplexing)}{66}{0}{4}
+\beamer@subsectionintoc {4}{4}{STDM (Statistical Time Division Multiplexing)}{67}{0}{4}
+\beamer@subsectionintoc {4}{5}{CDM/CDMA (Code Division Multiplexing / Code Division Multiple Access)}{68}{0}{4}
+\beamer@subsectionintoc {4}{6}{OFDMA (Orthogonal Frequency Division Multiple Access)}{69}{0}{4}
+\beamer@subsectionintoc {4}{7}{WDM (Wavelength Division Multiplexing)}{70}{0}{4}
+\beamer@subsectionintoc {4}{8}{DWDM (Dense Wavelength Division Multiplexing)}{71}{0}{4}

@@ -64,8 +64,21 @@ of the OSI model
 - explain that constellation diagrams mean angle is phase and distance is amplitude
 - explain that frequency would interfere with phase
 
+# Multiplexing
+- explain what multiplexing is
 
-
+## FDM
+## OFDM
+## TDM
+## STDM
+## CDM / CDMA
+- explain that CDM is pretty much always used for everyone using the same
+- talk about example in the book about people talking
+- explain problem if they aren't talking at the same time
+## CDMA
+## OFDMA
+## WDM
+## DWDM
 
 # Extra
 - fourier formulas derivation

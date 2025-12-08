@@ -33,22 +33,22 @@ Masters in Engenharia Informática, University of Algarve}
 
 \maketitle
 
-% Uncomment for final draft only
-%\setcounter{page}{0}
 \journal{}
 
 %% ------------------------------------------------------------
 \begin{abstract}
 	Code-division multiple access (CDMA) is an algorithm for multiple users to share the same channel simultaneously.
-	As such it comes with several drawbacks, mainly multiple-access interferance (MAI). 
+	As such it comes with several drawbacks, mainly multiple-access interferance (MAI). MAI mainly manifests as four
+	different problems: The near-far problem, where data from users further from the base station cannot be received
+	and decoded correctly. The out-of-phase chips problem, where different data is being sent out of phase, making
+	the data impossible to decode. Multipath channel distortion, on which echoes of the signal interfere with the
+	channel negatively. And finally the doppler effect, which worsens data retreival by users moving in space.
+	The most effective way of mitigating MAI currently, is with Rake CDMA and PN codes, to mitigate out-of-phase chips,
+	multipath channel distortion and a bit of the doppler effect. Space-time coded (STC) CDMA systems, in order to mitigate the near-far problem and
+	line of sight (LOS) issues. Multiuser detectors (MUDS) for further mitigating the near-far problem as well as some problems
+	that come with PN codes. And finally Power Control, in order to completely mitigate the near-far problem, as the
+	near-far problem is the most destructive in CDMA.
 \end{abstract}
-%% ------------------------------------------------------------
-
-% Uncomment for final draft only
-%% ------------------------------------------------------------
-% \begin{keywords}
-% Keyword1, Keyword2, Keyword3 
-% \end{keywords}
 %% ------------------------------------------------------------
 
 %% ------------------------------------------------------------
@@ -294,10 +294,6 @@ algorithms must be used in order to achieve efficient communication.
 \newpage
 \nocite{*}
 \bibliography{references}
-%% ------------------------------------------------------------
-
-%% ------------------------------------------------------------
-
 
 %% -----------------
 \end{document}

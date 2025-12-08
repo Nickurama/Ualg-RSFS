@@ -1,0 +1,250 @@
+%\documentclass{cwpreport} % for review/editing/polishing
+%\linespread{1.5}           % for review/editing/polishing
+\documentclass[onecolumn]{cwpreport} % for final draft
+
+
+% Packages used by default CWP reports built by M8R
+\usepackage{times,natbib,amsmath,graphicx,color,amssymb,amsbsy,lineno,setspace,algorithm2e,lipsum,booktabs}
+\bibliographystyle{plainnat}
+
+% Specific paper formatting for CWP report
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11.0in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textheight}{8.75in}
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{+.015625in}
+\setlength{\evensidemargin}{+.015625in}
+
+% Final draft only
+\title[]{State of Art on CDMA interference mitigation technology} 
+% for editing/reviewing
+%\title{Measuring wave propagation through an open-pit mine using stereo videos} 
+%\righthead{training data}
+%\lefthead{Rapstine & Sava}
+
+% Final draft only
+\author[]{Diogo Fonseca
+\\
+Masters in Engenharia Informática, University of Algarve} 
+%
+%\author{Thomas Rapstine, Paul Sava, Ashley Grant, \& Jeff Shragge}
+\begin{document}
+
+\maketitle
+
+% Uncomment for final draft only
+%\setcounter{page}{0}
+\journal{}
+
+%% ------------------------------------------------------------
+\begin{abstract}
+\lipsum[2]
+\end{abstract}
+%% ------------------------------------------------------------
+
+% Uncomment for final draft only
+%% ------------------------------------------------------------
+% \begin{keywords}
+% Keyword1, Keyword2, Keyword3 
+% \end{keywords}
+%% ------------------------------------------------------------
+
+%% ------------------------------------------------------------
+\section{Introduction}
+
+Code-division multiple access (CDMA) is an algorithm for multiple users to use the same channel simultaneously. The way
+it works is by assigning different orthogonal codes (chips) for each user in such a way that it allows them to represent a 1 or
+a 0. A 1 is then represented by the original assigned orthogonal code for that user, and 0 represented by its simetric.
+CDMA was often used for 2G and 3G mobile networks, and is still used for GPS and military communication.
+
+Because the codes are orthogonal, when they merge it's possible to recover each and every user's message from the joint waves.
+This is only possible, however, if the waves merge at the exact same phase on the receiver end. Furthermore if one wave from
+one transmitter/user has higher amplitude (is "louder") than the others, it drowns the others and makes them unrecoverable.
+This state-of-art report focuses on how modern CDMA and variants deal with these and some other multiple-access
+interference (MAI) problems.
+
+% Here is an example of an citation \citep{hale_atomic_2001}. Here is an example of an inline citation from \cite{haber_inversion_2007}.
+
+%% ------------------------------------------------------------
+
+\section{MAI (multiple-access interference)}
+
+\subsection{Near-Far problem}
+The near-far problem is the single most fundamental flaw of CDMA. Starting with an example,
+let's say we have 4 bit chips for each user as such:
+\begin{itemize}
+	\item \textbf{User 1:} $\boldsymbol{[+1, -1, +1, +1]}$
+	\item \textbf{User 2:} $\boldsymbol{[+1, +1, -1, -1]}$
+	\item \textbf{User 3:} $\boldsymbol{[-1, +1, +1, -1]}$
+\end{itemize}
+
+ideally, when the waves constructively and destructively interfere, the first bit of the chip will result in $ (1 + 1 - 1) = 2 $.
+However, due to different distancing, or even different powered RF transmitters, this results in different
+magnitudes of waves being sent. What should be $ 1 + 1 - 1 $ might (anecdotally) actually result in $ 2 + 0.1 - 5 = -2.9$ due to
+the distance and power at which the transmitters are broadcasting.
+
+This destroys the orthogonality of the space, making it impossible to decode the original bits from chips for \textbf{every}
+user. This shows that for vector orthogonality to be achieved, it is mandatory to have uniform amplitudes for the waves.
+The price for the noncompliance of uniformity being the loss of orthogonality, and thus the loss of information.
+
+\subsection{Out-of-phase chips}
+This is the second most substantial problem in CDMA. Also potentially resulting in a complete loss of information.
+The problem relies in the way the waves constructively and destructively interfere. If the waves are interfering out
+of phase, this will result in loss of orthogonality. An example follows, analogous to the above.
+
+\begin{itemize}
+	\item \textbf{User 1:} $\boldsymbol{[+1, -1, +1, +1]}$
+	\item \textbf{User 2:} $\boldsymbol{[+1, +1, -1, -1]}$
+	\item \textbf{User 3:} $\boldsymbol{[-1, +1, +1, -1]}$
+\end{itemize}
+
+Imagine that \textit{User 3} either moved in space in relation to the receiving station, has a slight processing delay, or any
+other problem resulting in a 1-chip delay.
+Instead of the waves interfering as such: $(1 + 1 - 1) = 2$, they will interfere in the following way: $(1 + 1 + 1) = 3$.
+The same applies for all the following chips, resulting in loss of orthogonality, and therefore total loss of
+data. The same fenomena occurrs for half-bit delays and potentially for even smaller delays. The same obviously
+also applies for greater chip phase shifts (delays).
+
+
+\subsection{Multipath channel distortion}
+
+Multipath distortion occurrs when phase-shifted, lower amplitude replicas of the same wave
+reach the receiver. This is often the product of waves bouncing on surfaces and reaching
+the receiver as "echoes", often at later times (phase shifted) and with increasingly lower amplitudes.
+
+As this is not random noise or interference and as such classifies as structured interference, it strongly impacts
+the decoding process. We are getting "phantom" versions of valid chips, interfering with the rest in such a way
+that it might cripple the decoding process. The more multipath channel distortion, the worse the decoding error becomes.
+
+\subsection{Doppler effect}
+
+As transmitters move in space, their transmitted waves are subject to the doppler effect, making them
+higher frequency in the direction of movement and lower frequency in the opposite direction.
+This creates a continuously changing phase shift, which creates a special case of the out-of-phase
+chips in which the phase keeps changing, making it seem as if the signal is "spinning" on the
+receiver end.
+
+%% ------------------------------------------------------------
+
+\section{Problem statements}
+
+\subsection{Downlink (synchronous CDMA)}
+
+The problem downlink, meaning that we want to send data from the central tower to the users
+is pretty straight forward, we want to broadcast information in the channel so that all users
+can decode their part of the information. Amplitude of the signal is dictated by the central
+station and therefore should be "audible" by all users in range. Furthermore there is no
+MAI to worry about, as long as the user is close enough to a central station in such a way
+that it's amplitude overpowers other potential stations using CSMA. In other words, this
+usually means that the distance from the user to one of the stations is lower than others,
+making MAI not a problem for user decoding.
+
+\subsection{Uplink (asynchronous CDMA)}
+
+The problem uplink, meaning that we want to send data from the users to the central tower
+is much more complicated than the downlink. It implies that all users, with different
+locations, different amplitude transmitters, different speeds and different distances
+from the central tower, need to communicate with the central tower.
+
+This, of course, leads to an amount of MAI that makes the data completely incoherent
+and impossible to decode by the central station. This is the core limitation of
+CDMA, and where all the aspects of MAI really come into play in a very destructive way.
+
+%% ------------------------------------------------------------
+
+\section{Solutions}
+
+\subsection{CDMA Rake}
+
+The CDMA Rake solution was primarily designed to deal with the multipath channel distortion, but
+ends up mitigating a lot of the MAI problems.
+The way it manages this, is by first replacing the orthognal codes, with quasi-orthogonal codes
+called PN codes.
+
+\subsubsection{PN codes}
+
+Assume each user has a unique identification (i.e. A phone's electronic serial number (ESN)).
+Furthermore, assume the base station has already communicated with the user, and gotten it's
+unique identification. Upon this, usually based on both the current time and unique identification
+of the user, using a standard predefined algorithm, an identical seed is generated for the user and
+base station. Upon the base station and user having the same seed, both then generate a (usually) $ 2^{42} $-long
+pseudorandom noise (PN) code based on it. Since both have the same seed, and therefore the same PN code,
+now they're ready to begin CDMA communication.
+
+This PN code is uniformly random, in such a way that the average of all values are 0 (if each bit
+is encoded between either -1 or 1). This both makes time synchronization easy and makes it that so
+other parallel PN codes that are being transmitted are equivalent to noise, no longer being structured
+interferance. This way it's as if the chips vectors are orthognal. The way bits are then encoded in this
+PN code is as follows: if the chipp sequence length is $ n $, that means each data bit will be encoded into
+the chipp sequence
+
+$$ C_i = (C_{i \cdot n}, C_{i \cdot n + 1}, \ldots,  C_{(i + 1) \cdot n - 1}) $$
+and a 0 data bit will be encoded to $ -C_i $. The next data bit sent, will already be encoded into
+$ C_{i + 1} $, and so on and so forth.
+
+\subsubsection{The Rake System}
+
+The rake consists of multiple parallel processing units (called "Fingers"), a controller, and a combiner.
+Each finger receives the signal and correlates it with phase-shifted versions of the user's PN code (the possible "echoes").
+The controller takes all of these signals and searches through all possible delays of the channel, called the
+"delay spread" of the channel, in order to identify peaks in the correlation profile, finding each echo.
+The combiner takes these echoes, phase-shifts them such that they all coincide, and they are all summed, acting as gain, amplifying the
+amplitude of the received signal. Each echo is asigned a different weight proportional to it's amplitude and correlation profile
+(how probable is it to be an actual echo of the same signal) such that the sum is actually a weighted sum of these signals/echoes.
+
+\subsubsection{MAI mitigation}
+
+The more fingers, the better the rake system becomes, but it also increases power consumption. In this way, the Rake receiver turns a
+known weakness into a strength, exploiting the signal replicas and turning them into gain.
+As such, it severely mitigates multipath channel distortion making it into a non-problem. 
+
+Not only that, but the use of PN codes mitigates the out-of-phase chips, as the chips from other senders will cancel out into noise,
+making each chip orthogonal with the background noise. This gets mitigated to such a degree that out-of-phase chips also stop being a problem.
+
+\subsection{Space-time coded CDMA systems}
+
+The main idea behind space-time coding (STC) is to use multiple antennas to transmit. This introduces structured redundancy in both space and time.
+In such a way that we get signal gain by listening to all the antennas, or we can still decode messages when other antennas are obstructed.
+
+The way this works is by having each antenna broadcast the same information but at different times with order information.
+Following is an example of how this can be done for two antennas:
+
+\begin{tabular}{|c|c|c|}
+\toprule
+& \textbf{Antenna 1} & \textbf{Antenna 2} \\
+\midrule
+\textbf{t=0} & & \\
+\textbf{t=1} & & \\
+\bottomrule
+\end{tabular}
+
+\subsection{Multiuser detectors}
+
+\subsection{Common downlink solution}
+
+\subsection{Common uplink solution}
+
+%% ------------------------------------------------------------
+
+\section{Conclusions}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.475\textwidth]{Fig/DaintreeRiver.jpg}  
+%     \includegraphics[width=0.475\textwidth]{Fig/GeledaMonkeys.jpg} 
+%     \caption{Photo of the (a) Daintree River in Australia and (b) the Geleda Monkeys.}
+%     \label{fig:model_volume}
+% \end{figure}
+
+%% ------------------------------------------------------------
+\newpage
+\nocite{*}
+\bibliography{references}
+%% ------------------------------------------------------------
+
+%% ------------------------------------------------------------
+
+
+%% -----------------
+\end{document}

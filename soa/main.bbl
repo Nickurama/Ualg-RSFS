@@ -1,0 +1,114 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bensley and Aazhang(1998)]{Bensley1998}
+S.E. Bensley and B.~Aazhang.
+\newblock Maximum-likelihood synchronization of a single user for code-division
+  multiple-access communication systems.
+\newblock \emph{IEEE Transactions on Communications}, 46\penalty0 (3):\penalty0
+  392–399, March 1998.
+\newblock ISSN 0090-6778.
+\newblock \doi{10.1109/26.662645}.
+\newblock URL \url{http://dx.doi.org/10.1109/26.662645}.
+
+\bibitem[Corvaja and Pupolin()]{Corvaja}
+R.~Corvaja and S.~Pupolin.
+\newblock Multi-user performance of cdma in the presence of phase noise.
+\newblock In \emph{IEEE GLOBECOM 1998 (Cat. NO. 98CH36250)}, volume~6 of
+  \emph{GLOCOM-98}, page 3314–3319. IEEE.
+\newblock \doi{10.1109/glocom.1998.775819}.
+\newblock URL \url{http://dx.doi.org/10.1109/GLOCOM.1998.775819}.
+
+\bibitem[E.~Simon and Raoof(2007)]{eric_sync_2007}
+L.~Ros E.~Simon and K.~Raoof.
+\newblock Synchronization over rapidly time-varying multipath channel for cdma
+  downlink rake receivers in time-division mode.
+\newblock \emph{IEEE Transactions on Vehicular Technology}, 56\penalty0
+  (4):\penalty0 2216--225, 2007.
+\newblock \doi{https://doi.org/10.1109/tvt.2007.897664}.
+
+\bibitem[Gajbhiye and Satapathy(2011)]{Gajbhiye2011}
+Mangala~R. Gajbhiye and J.~K. Satapathy.
+\newblock Performance comparison of adaptive mmse-mrc mud for ds-cdma system in
+  different multipath channels.
+\newblock In \emph{Proceedings of the 2011 International Conference on
+  Communication, Computing &amp; Security - ICCCS ’11}, ICCCS ’11, page~56.
+  ACM Press, 2011.
+\newblock \doi{10.1145/1947940.1947953}.
+\newblock URL \url{http://dx.doi.org/10.1145/1947940.1947953}.
+
+\bibitem[Iltis()]{Iltis}
+R.A. Iltis.
+\newblock A digital receiver for demodulation of cdma waveforms with a-priori
+  unknown delays and amplitudes.
+\newblock In \emph{MILCOM 91 - Conference record}, page 113–116. IEEE.
+\newblock \doi{10.1109/milcom.1991.258215}.
+\newblock URL \url{http://dx.doi.org/10.1109/MILCOM.1991.258215}.
+
+\bibitem[Lei and Lim(2000)]{zhongding_sync_2000}
+Zhongding Lei and Teng~Joon Lim.
+\newblock Estimation of directions of arrival of multipath signals in cdma
+  systems.
+\newblock \emph{IEEE Transactions on Communications}, 48\penalty0 (6):\penalty0
+  1022--1028, 2000.
+\newblock \doi{https://doi.org/10.1109/26.848564}.
+
+\bibitem[Li(2002)]{Li2002}
+H.~Li.
+\newblock Differential and coherent decorrelating multiuser receivers for
+  space-time coded cdma systems.
+\newblock In \emph{Sensor Array and Multichannel Signal Processing Workshop
+  Proceedings, 2002}, page 575–579. IEEE, 2002.
+\newblock \doi{10.1109/sam.2002.1191106}.
+\newblock URL \url{http://dx.doi.org/10.1109/SAM.2002.1191106}.
+
+\bibitem[Lohan et~al.(2005)Lohan, Hamila, Lakhzouri, and Renfors]{Lohan2005}
+E.S. Lohan, R.~Hamila, A.~Lakhzouri, and M.~Renfors.
+\newblock Highly efficient techniques for mitigating the effects of multipath
+  propagation in ds-cdma delay estimation.
+\newblock \emph{IEEE Transactions on Wireless Communications}, 4\penalty0
+  (1):\penalty0 149–162, January 2005.
+\newblock ISSN 1536-1276.
+\newblock \doi{10.1109/twc.2004.840231}.
+\newblock URL \url{http://dx.doi.org/10.1109/TWC.2004.840231}.
+
+\bibitem[Orr(2009)]{Orr2009}
+Richard~S. Orr.
+\newblock Code phase and delay settings that minimize cdma interference.
+\newblock In \emph{2009 IEEE Aerospace conference}, page 1–12. IEEE, March
+  2009.
+\newblock \doi{10.1109/aero.2009.4839397}.
+\newblock URL \url{http://dx.doi.org/10.1109/AERO.2009.4839397}.
+
+\bibitem[van Nee()]{vanNee}
+R.D.J. van Nee.
+\newblock Timing aspects of synchronous cdma.
+\newblock In \emph{5th IEEE International Symposium on Personal, Indoor and
+  Mobile Radio Communications, Wireless Networks - Catching the Mobile
+  Future.}, WNCMF-94, page 439–443. IOS Press.
+\newblock \doi{10.1109/wncmf.1994.529127}.
+\newblock URL \url{http://dx.doi.org/10.1109/WNCMF.1994.529127}.
+
+\bibitem[Yang and Tan()]{WeiYang}
+Wei Yang and Zhenhui Tan.
+\newblock Joint doa estimation and phase calibration for synchronous cdma with
+  decorrelator.
+\newblock In \emph{IEEE International Symposium on Phased Array Systems and
+  Technology, 2003.}, page 452–457. IEEE.
+\newblock \doi{10.1109/past.2003.1257024}.
+\newblock URL \url{http://dx.doi.org/10.1109/PAST.2003.1257024}.
+
+\bibitem[Zhaocheng et~al.()Zhaocheng, Yan, Zhixing, and
+  Shaodong]{WangZhaocheng}
+Wang Zhaocheng, Yao Yan, Yang Zhixing, and Mao Shaodong.
+\newblock Multiuser synchronization in noncoherent asynchronous cdma.
+\newblock In \emph{Proceedings of Vehicular Technology Conference - VTC},
+  volume~1 of \emph{VETEC-96}, page 593–595. IEEE.
+\newblock \doi{10.1109/vetec.1996.503517}.
+\newblock URL \url{http://dx.doi.org/10.1109/VETEC.1996.503517}.
+
+\end{thebibliography}

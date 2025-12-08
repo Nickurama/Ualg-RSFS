@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.11)  8 DEC 2025 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.11)  8 DEC 2025 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -433,28 +433,30 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5905 strings out of 475171
- 92026 string characters out of 5767094
- 577528 words of memory out of 5000000
- 28792 multiletter control sequences out of 15000+600000
- 582982 words of font info for 92 fonts, out of 8000000 for 9000
+ 5923 strings out of 475171
+ 92274 string characters out of 5767094
+ 577549 words of memory out of 5000000
+ 28804 multiletter control sequences out of 15000+600000
+ 587229 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 79i,7n,93p,351b,249s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,9n,93p,351b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-mextra/cmmib9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/urw/couri
-er/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
-re/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 146380 bytes).
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share
+/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (5 pages, 174269 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

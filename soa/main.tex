@@ -202,28 +202,74 @@ As such, it severely mitigates multipath channel distortion making it into a non
 Not only that, but the use of PN codes mitigates the out-of-phase chips, as the chips from other senders will cancel out into noise,
 making each chip orthogonal with the background noise. This gets mitigated to such a degree that out-of-phase chips also stop being a problem.
 
-\subsection{Space-time coded CDMA systems}
+\subsection{Space-time coded (STC) CDMA systems}
 
 The main idea behind space-time coding (STC) is to use multiple antennas to transmit. This introduces structured redundancy in both space and time.
 In such a way that we get signal gain by listening to all the antennas, or we can still decode messages when other antennas are obstructed.
 
 The way this works is by having each antenna broadcast the same information but at different times with order information.
-Following is an example of how this can be done for two antennas:
+In Table~\ref{antenna_example} is an example of how this can be done for two antennas, for the encoding in chips of the first bit, $ c_1 $, and
+the encoding of the second bit sent, $ c_2 $ (using PN codes).
 
-\begin{tabular}{|c|c|c|}
-\toprule
-& \textbf{Antenna 1} & \textbf{Antenna 2} \\
-\midrule
-\textbf{t=0} & & \\
-\textbf{t=1} & & \\
-\bottomrule
-\end{tabular}
+\begin{center}
+	\begin{table}
+		\begin{center}
+			\begin{tabular}{c c c}
+				\toprule
+				& \textbf{Antenna 1} & \textbf{Antenna 2} \\
+				\midrule
+				$t=0$ & $c_0$ & $c_1$ \\
+				$t=1$ & $c_1$ & $-c_0$ \\
+				\bottomrule
+			\end{tabular}
+			\caption{Individual antenna transmission at time $t$.}
+			\label{antenna_example}
+		\end{center}
+	\end{table}
+\end{center}
 
-\subsection{Multiuser detectors}
+This way, when the receiver obtains these signals, assuming it knows this configuration beforehand, it can most of the times decode the full message as long
+as one of the antennas is available at a given time, even if it's a different antenna. The receiver can decode each bit by knowing the sending
+pattern of each antenna (and knowing which antenna is receiving from). If it were to receive from the second antenna at the second time slot,
+it would know that it's receiving the first bit. The reason for it's negation is to make this sending space orthogonal. This is how we know
+which antenna is transmitting.
+
+If each user has a multi-antenna system, STC CDMA is perfect to neutralize the near-far problem, however this comes at a great power cost,
+which might not be ideal for low power devices. Modern telephones do have multi-antenna systems, being capable of using this system.
+
+\subsection{Multiuser detectors (MUD)}
+
+Multiuser detectors (MUDs) are ways of receiving data through CDMA more reliable, mitigating the near-far problem as long as further
+mitigating the problem that comes with quasi-orthogonal codes (PN codes).
+
+The way MUDs work is by listening to every single signal instead of taking other signals as interferance.
+This is usually done by using a maximum likelihood detector. This detector
+tests all possible combinations of data bits from all users and chooses the set that is statistically more likely, given the entire
+received signal. This provides the \textbf{best possible performance} with the minimum error. This algorithm is, however, extremely
+inefficient ($O(2^k)$), when $k$ is the number of users transmitting simultaneously.
+
+Upon decoding all the data from every other user, the current user can subtract the all the other data (with included amplitudes) 
+from the main signal, in order to get the highest quality version of the data it's receiving.
 
 \subsection{Common downlink solution}
 
+For downlink, the solution is pretty straight forward. It's also known as synchronous CDMA. We can use
+common welsh codes (welsh codes provide orthogonal binary strings). Without having to rely on quasi-orthogonal
+PN codes since all the data is broadcast at once, thus not having out-of-phase chip problems.
+
+Furthermore, since there's only one sender, there is no MAI by definition (multiple access interferance). STC CDMA can also be used
+as long as the station has multiple antennas, in order for the users to receive higher fidelity data.
+
 \subsection{Common uplink solution}
+
+For uplink, a combination of Rake systems on the central station with PN codes, users with STC CDMA systems whenever possible, and
+both users and (especially) stations employing MUDS is critical.
+
+For further near-far mitigation, a technique called Power Control is employed. The way it works is for the station to tell each user
+to transmit quieter (lower the amplitude) or louder (increase the amplitude). If the base level is 30db, and a transmitter is transmitting
+at 37db, the station tells the user to lower the power by 7db, thus employing Power Control. This makes users closer to the tower have
+to transmit at lower amplitudes, and users far from the tower transmit at higher amplitudes. As the users know the distance between
+them and the tower, they can calculate what would equate to a $n$-db decrease.
 
 %% ------------------------------------------------------------
 

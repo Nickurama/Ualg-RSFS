@@ -39,7 +39,8 @@ Masters in Engenharia Informática, University of Algarve}
 
 %% ------------------------------------------------------------
 \begin{abstract}
-\lipsum[2]
+	Code-division multiple access (CDMA) is an algorithm for multiple users to share the same channel simultaneously.
+	As such it comes with several drawbacks, mainly multiple-access interferance (MAI). 
 \end{abstract}
 %% ------------------------------------------------------------
 
@@ -201,6 +202,7 @@ As such, it severely mitigates multipath channel distortion making it into a non
 
 Not only that, but the use of PN codes mitigates the out-of-phase chips, as the chips from other senders will cancel out into noise,
 making each chip orthogonal with the background noise. This gets mitigated to such a degree that out-of-phase chips also stop being a problem.
+Furthermore, as it tracks out of phase and lower amplitude replicas, it can also diminish the doppler effect in the received signal.
 
 \subsection{Space-time coded (STC) CDMA systems}
 
@@ -275,13 +277,18 @@ them and the tower, they can calculate what would equate to a $n$-db decrease.
 
 \section{Conclusions}
 
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.475\textwidth]{Fig/DaintreeRiver.jpg}  
-%     \includegraphics[width=0.475\textwidth]{Fig/GeledaMonkeys.jpg} 
-%     \caption{Photo of the (a) Daintree River in Australia and (b) the Geleda Monkeys.}
-%     \label{fig:model_volume}
-% \end{figure}
+The worst problems in CDMA are the near-far problem and the out-of-phase chips problem.
+The out-of-phase chips problem can mostly be mitigated by PN codes, of which their new
+quasi-orthogonal problem can also be mitigated by MUDS.
+The near-far problem, can be mitigated most reliably by Power Control, but also by MUDs
+and a bit by STC CDMA and the Rake system.
+
+Multipath channel distortion, which is a real issue, although a lesser one, can be almost completely mitigated by
+the Rake system alone, and turned into further gain, mitigating the near-far problem as stated previously.
+
+For downlink transmission, there is essentially no transmission issues, as all that is required is to send all data
+in orthogonal welsh codes through chip vectors. However, for uplink transmission, a mixture of all the systems and
+algorithms must be used in order to achieve efficient communication.
 
 %% ------------------------------------------------------------
 \newpage

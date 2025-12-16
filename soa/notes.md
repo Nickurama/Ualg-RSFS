@@ -3,9 +3,6 @@
 - 14 papers interesting
 
 # todo
-- write abstract
-- write SOA
-- write conclusion
 - review
 
 - read papers

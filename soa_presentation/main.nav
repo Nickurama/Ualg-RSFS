@@ -1,0 +1,100 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/3}{}{0}}
+\headcommand {\beamer@framepages {2}{3}}
+\headcommand {\beamer@sectionpages {1}{3}}
+\headcommand {\beamer@subsectionpages {1}{3}}
+\headcommand {\sectionentry {1}{Screening Process}{4}{Screening Process}{0}}
+\headcommand {\slideentry {1}{0}{1}{4/8}{}{0}}
+\headcommand {\beamer@framepages {4}{8}}
+\headcommand {\beamer@sectionpages {4}{8}}
+\headcommand {\beamer@subsectionpages {4}{8}}
+\headcommand {\sectionentry {2}{Introduction}{9}{Introduction}{0}}
+\headcommand {\slideentry {2}{0}{1}{9/12}{}{0}}
+\headcommand {\beamer@framepages {9}{12}}
+\headcommand {\beamer@sectionpages {9}{12}}
+\headcommand {\beamer@subsectionpages {9}{12}}
+\headcommand {\sectionentry {3}{MAI (Multiple-Access Interference)}{13}{MAI (Multiple-Access Interference)}{0}}
+\headcommand {\slideentry {3}{0}{1}{13/13}{}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{Near-Far problem}}
+\headcommand {\slideentry {3}{1}{1}{14/17}{Near-Far problem}{0}}
+\headcommand {\beamer@framepages {14}{17}}
+\headcommand {\slideentry {3}{1}{2}{18/22}{Near-Far problem}{0}}
+\headcommand {\beamer@framepages {18}{22}}
+\headcommand {\beamer@subsectionpages {14}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Out-of-phase chips}}
+\headcommand {\slideentry {3}{2}{1}{23/26}{Out-of-phase chips}{0}}
+\headcommand {\beamer@framepages {23}{26}}
+\headcommand {\slideentry {3}{2}{2}{27/32}{Out-of-phase chips}{0}}
+\headcommand {\beamer@framepages {27}{32}}
+\headcommand {\beamer@subsectionpages {23}{32}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{33}{Multipath channel distortion}}
+\headcommand {\slideentry {3}{3}{1}{33/37}{Multipath channel distortion}{0}}
+\headcommand {\beamer@framepages {33}{37}}
+\headcommand {\beamer@subsectionpages {33}{37}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{38}{Doppler effect}}
+\headcommand {\slideentry {3}{4}{1}{38/43}{Doppler effect}{0}}
+\headcommand {\beamer@framepages {38}{43}}
+\headcommand {\beamer@sectionpages {13}{43}}
+\headcommand {\beamer@subsectionpages {38}{43}}
+\headcommand {\sectionentry {4}{Problem Statements}{44}{Problem Statements}{0}}
+\headcommand {\beamer@subsectionpages {44}{43}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{44}{Downlink}}
+\headcommand {\slideentry {4}{1}{1}{44/49}{Downlink}{0}}
+\headcommand {\beamer@framepages {44}{49}}
+\headcommand {\beamer@subsectionpages {44}{49}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{50}{Uplink}}
+\headcommand {\slideentry {4}{2}{1}{50/55}{Uplink}{0}}
+\headcommand {\beamer@framepages {50}{55}}
+\headcommand {\beamer@sectionpages {44}{55}}
+\headcommand {\beamer@subsectionpages {50}{55}}
+\headcommand {\sectionentry {5}{Solutions}{56}{Solutions}{0}}
+\headcommand {\slideentry {5}{0}{1}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{57}{CDMA Rake}}
+\headcommand {\slideentry {5}{1}{1}{57/57}{CDMA Rake}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@subsubsectionentry {0}{5}{1}{1}{58}{PN codes}}
+\headcommand {\slideentry {5}{1}{2}{58/63}{CDMA Rake}{0}}
+\headcommand {\beamer@framepages {58}{63}}
+\headcommand {\slideentry {5}{1}{3}{64/68}{CDMA Rake}{0}}
+\headcommand {\beamer@framepages {64}{68}}
+\headcommand {\beamer@subsubsectionentry {0}{5}{1}{2}{69}{The Rake System}}
+\headcommand {\slideentry {5}{1}{4}{69/75}{CDMA Rake}{0}}
+\headcommand {\beamer@framepages {69}{75}}
+\headcommand {\beamer@subsubsectionentry {0}{5}{1}{3}{76}{MAI mitigation}}
+\headcommand {\slideentry {5}{1}{5}{76/82}{CDMA Rake}{0}}
+\headcommand {\beamer@framepages {76}{82}}
+\headcommand {\beamer@subsectionpages {57}{82}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{83}{Space-time coded (STC) CDMA systems}}
+\headcommand {\slideentry {5}{2}{1}{83/87}{Space-time coded (STC) CDMA systems}{0}}
+\headcommand {\beamer@framepages {83}{87}}
+\headcommand {\slideentry {5}{2}{2}{88/92}{Space-time coded (STC) CDMA systems}{0}}
+\headcommand {\beamer@framepages {88}{92}}
+\headcommand {\beamer@subsectionpages {83}{92}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{93}{Multiuser detectors (MUD)}}
+\headcommand {\slideentry {5}{3}{1}{93/99}{Multiuser detectors (MUD)}{0}}
+\headcommand {\beamer@framepages {93}{99}}
+\headcommand {\slideentry {5}{3}{2}{100/105}{Multiuser detectors (MUD)}{0}}
+\headcommand {\beamer@framepages {100}{105}}
+\headcommand {\beamer@subsectionpages {93}{105}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{106}{Common downlink solution}}
+\headcommand {\slideentry {5}{4}{1}{106/110}{Common downlink solution}{0}}
+\headcommand {\beamer@framepages {106}{110}}
+\headcommand {\beamer@subsectionpages {106}{110}}
+\headcommand {\beamer@subsectionentry {0}{5}{5}{111}{Common uplink solution}}
+\headcommand {\slideentry {5}{5}{1}{111/115}{Common uplink solution}{0}}
+\headcommand {\beamer@framepages {111}{115}}
+\headcommand {\beamer@sectionpages {56}{115}}
+\headcommand {\beamer@subsectionpages {111}{115}}
+\headcommand {\sectionentry {6}{Conclusions}{116}{Conclusions}{0}}
+\headcommand {\slideentry {6}{0}{1}{116/122}{}{0}}
+\headcommand {\beamer@framepages {116}{122}}
+\headcommand {\beamer@partpages {1}{122}}
+\headcommand {\beamer@subsectionpages {116}{122}}
+\headcommand {\beamer@sectionpages {116}{122}}
+\headcommand {\beamer@documentpages {122}}
+\headcommand {\gdef \inserttotalframenumber {26}}

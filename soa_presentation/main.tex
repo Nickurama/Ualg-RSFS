@@ -1,0 +1,398 @@
+\documentclass[11pt]{beamer}
+\usetheme{Madrid}
+\usefonttheme{serif}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{caption}
+\usepackage{siunitx}
+
+\usepackage{booktabs}
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+
+\setbeamertemplate{caption}[numbered]
+
+\author[]{Diogo Fonseca \\ Professor: João Dias}
+\title{SoA on CDMA multiple-access interference mitigation technology}
+% Informe o seu email de contato no comando a seguir
+% Por exemplo, alcebiades.col@ufes.br
+\newcommand{\email}{email}
+%\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\logo{\includegraphics[scale=0.15]{images/ualg_tiny.png}}
+\institute[]{UALG \par MESTRADO EM ENGENHARIA INFORMÁTICA} 
+\date{15 de Dezembro de 2025}
+%\subject{}
+
+% ---------------------------------------------------------
+% Selecione um estilo de referência
+\bibliographystyle{apalike}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Table of contents}
+    \only<1>{\tableofcontents[sections={1-4}]}
+    \only<2>{\tableofcontents[sections={5-6}]}
+\end{frame}
+
+
+\section{Screening Process}
+
+\begin{frame}{Screening Process}
+	\begin{itemize}
+		\item<2-> The research question made was "How does modern CDMA deal with interference and out-of-phase waves".
+		\item<3-> 48 papers were found in the last 20 years.
+		\item<4-> 14 papers remained after being filtered out by abstract and conclusion.
+		\item<5-> 12 papers remained after a full read.
+	\end{itemize}
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+	\begin{center}
+		\textbf{CDMA}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Multiple users use the same channel simultaneously.
+		\item<3-> Each user is assigned a different orthogonal code.
+		\item<4-> Because the codes are orthogonal, it's possible to retreive the original message of each user
+	\end{itemize}
+\end{frame}
+
+
+
+\section{MAI (Multiple-Access Interference)}
+
+\begin{frame}
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+		\usebeamerfont{title}\Huge\textbf{MAI (Multiple-Access Interference)}
+    \end{beamercolorbox}
+\end{frame}
+
+\subsection{Near-Far problem}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Near-Far problem}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Each user has different distancing or differently powered RF transmitters.
+		\item<3-> Signals end up with different amplitude when being received.
+		\item<4-> Loss of orthogonality occurrs.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Near-Far problem (example)}
+	\end{center}
+
+	\textbf{User chips:}
+
+	\textbf{User 1:} $\boldsymbol{[+1, -1, +1, +1]}$
+
+	\textbf{User 2:} $\boldsymbol{[+1, +1, -1, -1]}$
+
+	\textbf{User 3:} $\boldsymbol{[-1, +1, +1, -1]}$
+
+	\begin{itemize}
+		\item<2-> The waves will constructively and destructively interfere (merge).
+		\item<3-> Waves will have different magnitudes.
+		\item<4-> The addition of the first bit of the chip should result in $(1 + 1 - 1) = 2$.
+		\item<5-> This might actually result in $(2 + 0.1 - 5) = -2.9$ at the receiver.
+	\end{itemize}
+\end{frame}
+
+\subsection{Out-of-phase chips}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Out-of-phase chips}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> There is a delay in the waves being sent or the distancing between the users doesn't line up.
+		\item<3-> Chips will be out of phase.
+		\item<4-> Loss of orthogonality occurrs.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Out-of-phase chips (example)}
+	\end{center}
+
+	\textbf{User chips:}
+
+	\textbf{User 1:} $\boldsymbol{[+1, -1, +1, +1]}$
+
+	\textbf{User 2:} $\boldsymbol{[+1, +1, -1, -1]}$
+
+	\textbf{User 3:} $\boldsymbol{[-1, +1, +1, -1]}$
+
+	\begin{itemize}
+		\item<2-> The waves will constructively and destructively interfere (merge).
+		\item<3-> Waves will have different phases.
+		\item<4-> Imagine user 3 either moved in space in relation to the receiving station or had a slight processing delay resulting
+			in a 1-chip delay.
+		\item<5-> When merging for the first bit of the chip, instead of resulting in $(1 + 1 - 1) = 2$.
+		\item<6-> It results in $(1 + 1 + 1) = 3$.
+	\end{itemize}
+\end{frame}
+
+\subsection{Multipath channel distortion}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Multipath channel distortion}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Waves bounce on surfaces.
+		\item<3-> The receiver receives several copies of the same wave.
+		\item<4-> Each "echo" of the wave will be phase-shifted and in lower amplitude.
+		\item<5-> This interacts with the signals and causes interferance.
+	\end{itemize}
+\end{frame}
+
+\subsection{Doppler effect}
+
+\begin{frame}{MAI (Multiple-Access Interference)}
+	\begin{center}
+		\textbf{Doppler effect}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Transmitters move in space.
+		\item<3-> Waves become higher frequency in front of the transmitter.
+		\item<4-> Waves become lower frequency behind the transmitter.
+		\item<5-> This creates a continuously changing phase shift.
+		\item<6-> As the phase keeps changing, it seems as if the signal is "spinning" to the receiver.
+	\end{itemize}
+\end{frame}
+
+
+\section{Problem Statements}
+
+\subsection{Downlink}
+
+\begin{frame}{Downlink}
+	\begin{itemize}
+		\item<2-> We want to broadcast to all users in the channel.
+		\item<3-> The amplitude of the message for each user will be the same.
+		\item<4-> The messages are sent synchronously with eachother.
+		\item<5-> There is no orthogonalization issues.
+		\item<6-> Usually extremely easy to make work flawlessly.
+	\end{itemize}
+\end{frame}
+
+\subsection{Uplink}
+
+\begin{frame}{Uplink}
+	\begin{itemize}
+		\item<2-> Users send data to central tower.
+		\item<3-> Users have different locations, velocities and different amplitude transmitters.
+		\item<4-> This leads to a lot of MAI.
+		\item<5-> Data is completely incoherent and impossible to decode by the central station.
+		\item<6-> Core limitation of CDMA, where MAI comes into play very destructively.
+	\end{itemize}
+\end{frame}
+
+\section{Solutions}
+
+\begin{frame}
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+		\usebeamerfont{title}\Huge\textbf{Solutions}
+    \end{beamercolorbox}
+\end{frame}
+
+\subsection{CDMA Rake}
+
+\begin{frame}
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+		\usebeamerfont{title}\Huge\textbf{CDMA Rake}
+    \end{beamercolorbox}
+\end{frame}
+
+\subsubsection{PN codes}
+
+\begin{frame}{CDMA Rake}
+	\begin{center}
+		\textbf{PN codes} (1/2)
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Assume each user has a unique identification (i.e. A phone's ESN).
+		\item<3-> Further assume the base station has already communicated with the user and has it's unique identification.
+		\item<4-> Based on current time and unique identification, a seed is generated.
+		\item<5-> Upon having the same seed, a (usually) $2^{42}$-long pseudorandom noise (PN) code is generated.
+		\item<6-> The PN code is uniformly random in such a way that the average is 0, as each bit is encoded between 1 or -1.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{CDMA Rake}
+	\begin{center}
+		\textbf{PN codes} (2/2)
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Other PN codes being transmitted are equivalent to random noise, no longer structured interference.
+		\item<3-> Chip vectors are quasi-orthogonal.
+		\item<4-> If the chip sequence is of length $n$, each data bit will be encoded into the following chip sequence.
+	\end{itemize}
+
+	\uncover<5->{$$ C_i = (C_{i \cdot n}, C_{i \cdot n + 1}, \ldots,  C_{(i + 1) \cdot n - 1}) $$}
+	\uncover<5->{and a 0 data bit will be encoded to $ -C_i $. The next data bit sent, will already be encoded into}
+	\uncover<5->{$ C_{i + 1} $, and so on and so forth.}
+\end{frame}
+
+\subsubsection{The Rake System}
+
+\begin{frame}{CDMA Rake}
+	\begin{center}
+		\textbf{The Rake System}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Multiple parallel processing units (called "Fingers").
+		\item<3-> Each finger receives the signal and correlates it with a phase-shifted version ("echo") of the user's PN code.
+		\item<4-> Then a controller takes these signals and searches through all possible delays.
+		\item<5-> The controller then identifies peaks in the correlation profile, finding each "echo".
+		\item<6-> Each "echo" has a different weight proportional to it's amplitude and correlation (probability of it being of the same signal).
+		\item<7-> Finally the combiner takes each "echo" and does their weighted sum.
+	\end{itemize}
+\end{frame}
+
+\subsubsection{MAI mitigation}
+
+\begin{frame}{Rake}
+	\begin{center}
+		\textbf{MAI mitigation}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> The more fingers, the better the rake system becomes, but it also increases power consumption.
+		\item<3-> The Rake receiver turns a weakness into a strength, exploiting the signal replicas into gain.
+		\item<4-> This severely mitigates multipath channel distortion, making it a non-problem.
+		\item<5-> The PN codes mitigate out-of-phase chips, as the chips from other senders will cancel out into noise
+		\item<6-> Almost completely migigates out-of-phase chips and multipath channel distortion.
+		\item<7-> Diminishes the doppler effect as it tracks out of phase and lower amplitude replicas.
+	\end{itemize}
+\end{frame}
+
+\subsection{Space-time coded (STC) CDMA systems}
+
+\begin{frame}{Space-time coded (STC) CDMA systems}
+	\begin{itemize}
+		\item<2-> Main idea is to use multiple antennas to transmit.
+		\item<3-> Introduces structured redundancy in both space and time.
+		\item<4-> The redundancy is structured in such a way that we get signal gain by listening to more antennas.
+		\item<5-> We can also decode messages when other antennas are obstructed
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Space-time coded (STC) CDMA systems}
+	\begin{center}
+		\textbf{example}
+	\end{center}
+
+	\begin{center}
+		\begin{table}
+			\begin{center}
+				\begin{tabular}{c c c}
+					\toprule
+					& \textbf{Antenna 1} & \textbf{Antenna 2} \\
+					\midrule
+					$t=0$ & $c_0$ & $c_1$ \\
+					$t=1$ & $c_1$ & $-c_0$ \\
+					\bottomrule
+				\end{tabular}
+				\caption{Individual antenna transmission at time $t$ with 2 antennas.}
+				\label{antenna_example}
+			\end{center}
+		\end{table}
+	\end{center}
+
+	\begin{itemize}
+		\item<2-> Receiver knows this configuration beforehand.
+		\item<3-> Receiver can decode the full message as long as one antenna is available at a given time, even if it's a different antenna.
+		\item<4-> The reason for the negation is to make the sending space orthogonal.
+		\item<5-> If each user has a multi-antenna system, STC CDMA neutralizes the near-far problem.
+	\end{itemize}
+\end{frame}
+
+\subsection{Multiuser detectors (MUD)}
+
+\begin{frame}{Multiuser detectors (MUD)}
+	\begin{itemize}
+		\item<2-> MUDS listen to all signals instead of taking other signals as interference.
+		\item<3-> This is usually done by using a maximum-likelihood detector.
+		\item<4-> The detector tests all possible combinations of data bits from all users.
+		\item<5-> It then chooses the set that is statistically more likely.
+		\item<6-> This provides the \textbf{best possible performance} with the minimum error.
+		\item<7-> The algorithm is extremely inefficient ($O(2^k)$, when $k$ is the number of users transmitting simultaneously.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Multiuser detectors (MUD)}
+	\begin{itemize}
+		\item<2-> Upon decoding all data from every other user, the current user subtracts all the other data from the main signal.
+		\item<3-> Getting the highest quality version of the data it's receiving.
+		\item<4-> MUDs make receiving data through CDMA more reliable.
+		\item<5-> They mitigate the near-far problem.
+		\item<6-> They mitigate problems that come with having quasi-orthogonal codes (PN codes).
+	\end{itemize}
+\end{frame}
+
+\subsection{Common downlink solution}
+
+\begin{frame}{Common downlink solution}
+	\begin{itemize}
+		\item<2-> Usually denoted as Synchronous CDMA.
+		\item<3-> Welsh codes are used to provide orthogonal binary strings for chips.
+		\item<4-> All data is broadcast synchronously on the same amplitude.
+		\item<5-> STC can also be used as long as the station has multiple antennas, in order for users to receive higher fidelity data.
+	\end{itemize}
+\end{frame}
+
+\subsection{Common uplink solution}
+
+\begin{frame}{Common uplink solution}
+	\begin{itemize}
+		\item<2-> Quasi-orthogonal PN codes.
+		\item<3-> Users with STC CDMA systems (multi antennas) whenever possible.
+		\item<4-> Users and (especially) stations employing MUDs.
+		\item<5-> Power Control to further mitigate the near-far problem.
+	\end{itemize}
+\end{frame}
+
+\section{Conclusions}
+
+\begin{frame}{Conclusions}
+	\begin{itemize}
+		\item<2-> Worst problems are the near-far problem and the out-of-phase chips.
+		\item<3-> The out-of-phase chips is mitigated by PN codes.
+		\item<4-> The new quasi-orthogonal problem is further mitigated by MUDS.
+		\item<5-> The near-far problem is most reliably mitigated by Power Control, but also by MUDS (but also a bit by STC and the Rake system).
+		\item<6-> The multipath channel distortion is almost completely mitigated by the Rake System, turning the "echoes" into further gain.
+		\item<7-> For downlink transmission there is essentially no transmission issues, using welsh codes to generate orthogonal chip vectors.
+	\end{itemize}
+\end{frame}
+
+\end{document}

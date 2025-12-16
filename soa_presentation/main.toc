@@ -1,0 +1,20 @@
+\beamer@sectionintoc {1}{Screening Process}{4}{0}{1}
+\beamer@sectionintoc {2}{Introduction}{9}{0}{2}
+\beamer@sectionintoc {3}{MAI (Multiple-Access Interference)}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Near-Far problem}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Out-of-phase chips}{23}{0}{3}
+\beamer@subsectionintoc {3}{3}{Multipath channel distortion}{33}{0}{3}
+\beamer@subsectionintoc {3}{4}{Doppler effect}{38}{0}{3}
+\beamer@sectionintoc {4}{Problem Statements}{44}{0}{4}
+\beamer@subsectionintoc {4}{1}{Downlink}{44}{0}{4}
+\beamer@subsectionintoc {4}{2}{Uplink}{50}{0}{4}
+\beamer@sectionintoc {5}{Solutions}{56}{0}{5}
+\beamer@subsectionintoc {5}{1}{CDMA Rake}{57}{0}{5}
+\beamer@subsubsectionintoc {5}{1}{1}{PN codes}{58}{0}{5}
+\beamer@subsubsectionintoc {5}{1}{2}{The Rake System}{69}{0}{5}
+\beamer@subsubsectionintoc {5}{1}{3}{MAI mitigation}{76}{0}{5}
+\beamer@subsectionintoc {5}{2}{Space-time coded (STC) CDMA systems}{83}{0}{5}
+\beamer@subsectionintoc {5}{3}{Multiuser detectors (MUD)}{93}{0}{5}
+\beamer@subsectionintoc {5}{4}{Common downlink solution}{106}{0}{5}
+\beamer@subsectionintoc {5}{5}{Common uplink solution}{111}{0}{5}
+\beamer@sectionintoc {6}{Conclusions}{116}{0}{6}
